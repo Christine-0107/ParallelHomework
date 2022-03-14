@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1647253495 source:d:\大学\2.2并行程序设计\code\arm_superscalar_optimised\superscalar_better1.cpp
+	<stdio.h>
+	<sys/time.h>
+	<unistd.h>
+	<iostream>
+	<stdlib.h>
+	<cmath>
+
