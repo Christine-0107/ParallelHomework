@@ -1,5 +1,7 @@
 # depslib dependency file v1.0
-1647166960 source:d:\大学\2.2并行程序设计\code\cache_optimized\main.cpp
+1647334426 source:d:\大学\2.2并行程序设计\code\cache_optimized\main.cpp
 	<iostream>
 	<windows.h>
+	<stdio.h>
+	<time.h>
 

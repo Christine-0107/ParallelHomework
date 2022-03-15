@@ -14,18 +14,18 @@ int main()
     //int step=10;
     for(int N=2;N<=M;N*=2){
         for(int i=0;i<N;i++){
-            a[i]=i;
+            a[i]=rand()%100;
         } //initialize
         long long head,tail,freq;
         long counter;
-        if(N<=2048)
-            counter=1000000;
-        else if(N>2048&&N<=16348)
+        if(N<=pow(2.0,10))
             counter=100000;
-        else if(N>16348&&N<=32768)
+        else if(N>pow(2.0,10)&&N<=pow(2.0,15))
             counter=10000;
-        else
+        else if(N>pow(2.0,15)&&N<=pow(2.0,20))
             counter=100;
+        else
+            counter=1;
         long c=counter;
         QueryPerformanceFrequency((LARGE_INTEGER*)&freq);
         QueryPerformanceCounter((LARGE_INTEGER*)&head);

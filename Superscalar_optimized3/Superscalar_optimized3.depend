@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1647194022 source:d:\大学\2.2并行程序设计\code\superscalar_optimized3\main.cpp
+	<iostream>
+	<windows.h>
+	<stdlib.h>
+	<cmath>
+

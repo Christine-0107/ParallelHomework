@@ -2,6 +2,7 @@
 #include <windows.h>
 #include <stdlib.h>
 #include <cmath>
+#include <time.h>
 using namespace std;
 
 const long int M=pow(2.0,28);
@@ -9,28 +10,28 @@ long int a[M];
 long int sum;
 int main()
 {
-
+    srand((unsigned)time(NULL));
     cout<<"Normal Algorithm"<<endl;
-    //int step=10;
     for(int N=2;N<=M;N*=2){
         for(int i=0;i<N;i++){
-            a[i]=i;
+            a[i]=rand()%100;
         } //initialize
         long long head,tail,freq;
         long counter;
-        if(N<=2048)
+        if(N<=pow(2.0,10))
             counter=1000000;
-        else if(N>2048&&N<=16348)
+        else if(N>pow(2.0,10)&&N<=pow(2.0,15))
             counter=100000;
-        else if(N>16348&&N<=32768)
-            counter=10000;
+        else if(N>pow(2.0,15)&&N<=pow(2.0,20))
+            counter=1000;
         else
-            counter=100;
+            counter=10;
         long c=counter;
         QueryPerformanceFrequency((LARGE_INTEGER*)&freq);
         QueryPerformanceCounter((LARGE_INTEGER*)&head);
         while(c>0){
             c--;
+            sum=0;
             for(int i=0;i<N;i++){
                 sum+=a[i];
             }/*Normal algorithm*/
@@ -44,3 +45,4 @@ int main()
     }
     return 0;
 }
+
